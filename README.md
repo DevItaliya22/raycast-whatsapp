@@ -1,18 +1,53 @@
-# WhatsApp Extension
+# WhatsApp Contact Search for Raycast
 
-## How to get WhatsApp group code
+A powerful Raycast extension that allows you to quickly search and open WhatsApp conversations with your contacts. This extension provides a seamless way to find and start WhatsApp chats directly from Raycast.
 
-1. Open the WhatsApp group in any platform
-2. Click on the chat header to see the group information
-3. Scroll down and click `Invite to Group via Link`
-4. You will see a URL that looks like `https://chat.whatsapp.com/<group_code>`
-5. Copy the group code from the URL and paste it in Raycast
+## Features
 
-## Developer details
+- 🔍 Search contacts by name or phone number
+- 💬 Instantly open WhatsApp conversations
+- 🔄 Automatic contact synchronization
+- 📱 Works with WhatsApp Web and Desktop
+- ⚡ Fast and efficient contact search
 
-At the time of writing this, WhatsApp does not offer a public API for users. It only provides application links to
-quickly access already existing chats. Until WhatsApp provides a public API, the `Add Chat` and `Add Existing Group`
-commands will serve for adding the chats to the extension so users can access them from the `Open Chat` command.
+## Installation
 
-When the API is available, the `Add Chat`, `Import Contacts` and `Add Existing Group` commands will be obsolete while
-new commands such as `Create Group` or `Send Message` will become feasible.
+1. Install [Raycast](https://raycast.com/)
+2. Open Raycast and go to Extensions
+3. Search for "WhatsApp Contact Search"
+4. Click "Install"
+
+## Usage
+
+### Opening WhatsApp Conversations
+
+1. Open Raycast (⌘ + Space)
+2. Type "open in whatsapp"
+3. Search for a contact by name or phone number
+4. Press Enter to open the conversation in WhatsApp
+
+### Refreshing Contacts
+
+1. Open Raycast (⌘ + Space)
+2. Type "refresh contacts"
+3. Press Enter to update your contact list
+
+## Development
+
+This extension is built with:
+- TypeScript
+- React
+- Raycast API
+- AppleScript (for WhatsApp integration)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+Created by [devitaliya22](https://github.com/devitaliya22)
