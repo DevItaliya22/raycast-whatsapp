@@ -2,23 +2,23 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "whatsapp",
   "title": "Whatsapp",
-  "description": "Opens anything in whataspp",
+  "description": "Opens anything in whatsapp",
   "icon": "extension-icon.png",
   "author": "devitaliya22",
   "license": "MIT",
   "commands": [
     {
       "name": "open-in-whatsapp",
-      "title": "Open In Whatsapp",
+      "title": "Open in Whatsapp",
       "subtitle": "Open any contact in whatsapp",
-      "description": "Open any contact in whatsapp by searching for their name or phone number.It autosaves the contacts in the background.",
+      "description": "Open any contact in whatsapp by searching for their name or phone number. It autosaves the contacts in the background.",
       "mode": "view"
     },
     { 
       "name": "refresh",
       "title": "Refresh Contacts",
       "subtitle": "Refresh contacts",
-      "description": "Refresh contacts\n",
+      "description": "Refresh contacts",
       "mode": "view"
     }
   ],
