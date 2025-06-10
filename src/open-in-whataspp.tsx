@@ -1,3 +1,4 @@
+import React from "react";
 import { ActionPanel, Action, List, showToast, Toast } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { loadContacts, refreshContacts } from "./contact";
@@ -10,6 +11,7 @@ export default function Command() {
   useEffect(() => {
     async function loadOrRefreshContacts() {
       try {
+        showToast({ style: Toast.Style.Animated, title: "Fetching contacts..." });
         const cached = loadContacts();
         if (cached.length > 0) {
           setContacts(cached);
@@ -19,7 +21,6 @@ export default function Command() {
           setContacts(refreshed);
           setIsLoading(false);
         }
-        showToast({ style: Toast.Style.Animated, title: "Fetching contacts..." });
       } catch (err) {
         console.error("Error loading contacts:", err);
       }

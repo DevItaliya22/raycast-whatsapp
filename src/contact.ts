@@ -1,5 +1,5 @@
 // contacts.ts
-import { runAppleScript } from "run-applescript";
+import { runAppleScript } from "@raycast/utils";
 import { homedir } from "os";
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
 import { join } from "path";
