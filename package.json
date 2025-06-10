@@ -9,9 +9,9 @@
   "commands": [
     {
       "name": "open-in-whataspp",
-      "title": "open in whataspp",
-      "subtitle": "open in whataspp",
-      "description": "open in whataspp\n",
+      "title": "Open in WhatsApp",
+      "subtitle": "Open any contact in whatsapp",
+      "description": "Open any contact in whatsapp by searching for their name or phone number.It autosaves the contacts in the background.",
       "mode": "view"
     },
     { 
@@ -25,7 +25,6 @@
   "dependencies": {
     "@raycast/api": "^1.99.4",
     "@raycast/utils": "^1.17.0",
-    "nvm": "^0.0.4",
     "run-applescript": "^7.0.0"
   },
   "devDependencies": {
