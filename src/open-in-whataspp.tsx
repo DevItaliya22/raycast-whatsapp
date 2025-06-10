@@ -24,14 +24,14 @@ export default function Command() {
         console.error("Error loading contacts:", err);
       }
     }
-  
+
     loadOrRefreshContacts();
   }, []);
-  
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(searchText.toLowerCase()) ||
-    contact.phone.toLowerCase().includes(searchText.toLowerCase())
+  const filteredContacts = contacts.filter(
+    (contact) =>
+      contact.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      contact.phone.toLowerCase().includes(searchText.toLowerCase()),
   );
 
   async function handleRefresh() {
@@ -44,21 +44,17 @@ export default function Command() {
   }
 
   return (
-    <List
-      isLoading={isLoading}
-      onSearchTextChange={setSearchText}
-      searchBarPlaceholder="Search WhatsApp contact..."
-    >
+    <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search WhatsApp contact...">
       {filteredContacts.map((contact, index) => (
         <List.Item
-          key={contact.phone + contact.name + index} 
+          key={contact.phone + contact.name + index}
           title={contact.name}
           subtitle={contact.phone}
           actions={
             <ActionPanel>
               <Action.OpenInBrowser
-                title="Open in WhatsApp"
-                url={`whatsapp://send?phone=${contact.phone.replace(/\D/g, "")}`} 
+                title="Open in Whatsapp"
+                url={`whatsapp://send?phone=${contact.phone.replace(/\D/g, "")}`}
               />
               <Action title="Refresh Contacts" onAction={handleRefresh} />
             </ActionPanel>

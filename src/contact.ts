@@ -41,7 +41,7 @@ function saveContacts(contacts: Contact[]) {
 
 function loadContacts(): Contact[] {
   console.log("loadContacts");
-    if (existsSync(cacheFile)) {
+  if (existsSync(cacheFile)) {
     const data = readFileSync(cacheFile, "utf-8");
     return JSON.parse(data) as Contact[];
   } else {

@@ -19,5 +19,5 @@ export default function Command() {
     run();
   }, []);
 
-  return null; 
+  return null;
 }
