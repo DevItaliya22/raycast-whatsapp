@@ -8,17 +8,17 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "open-in-whataspp",
-      "title": "open in whataspp",
+      "name": "open-in-whatsapp",
+      "title": "Open In Whatsapp",
       "subtitle": "Open any contact in whatsapp",
       "description": "Open any contact in whatsapp by searching for their name or phone number.It autosaves the contacts in the background.",
       "mode": "view"
     },
     { 
       "name": "refresh",
-      "title": "refresh contacts",
-      "subtitle": "refresh contacts",
-      "description": "refresh contacts\n",
+      "title": "Refresh Contacts",
+      "subtitle": "Refresh contacts",
+      "description": "Refresh contacts\n",
       "mode": "view"
     }
   ],
