@@ -1,10 +1,16 @@
-// contacts.js
+// contacts.ts
 import { runAppleScript } from "run-applescript";
+import { homedir } from "os";
+import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
+import { join } from "path";
 
 interface Contact {
   name: string;
   phone: string;
 }
+
+const cacheDir = join(homedir(), "Library/Application Support/raycast-whatsapp");
+const cacheFile = join(cacheDir, "contacts.json");
 
 async function getContacts(): Promise<string> {
   const result = await runAppleScript(`
@@ -23,19 +29,39 @@ async function getContacts(): Promise<string> {
         return contactList
     end tell
   `);
+  console.log("getContacts");
   return result;
 }
 
-async function parseContacts(): Promise<Contact[]> {
+function saveContacts(contacts: Contact[]) {
+  console.log("saveContacts");
+  mkdirSync(cacheDir, { recursive: true });
+  writeFileSync(cacheFile, JSON.stringify(contacts, null, 2), "utf-8");
+}
+
+function loadContacts(): Contact[] {
+  console.log("loadContacts");
+    if (existsSync(cacheFile)) {
+    const data = readFileSync(cacheFile, "utf-8");
+    return JSON.parse(data) as Contact[];
+  } else {
+    return [];
+  }
+}
+
+async function refreshContacts(): Promise<Contact[]> {
+  console.log("refreshContacts");
   const result = await getContacts();
-  console.log(result);
-  return result
+  const contacts = result
     .split("\n")
     .filter((line: string) => line.trim() !== "")
     .map((line: string) => {
       const [name, phone] = line.split("|").map((s: string) => s.trim());
       return { name, phone };
-      });
-  }
+    });
 
-export { getContacts, parseContacts };
+  saveContacts(contacts);
+  return contacts;
+}
+
+export { loadContacts, refreshContacts };

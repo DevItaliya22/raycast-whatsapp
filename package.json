@@ -13,6 +13,13 @@
       "subtitle": "open in whataspp",
       "description": "open in whataspp\n",
       "mode": "view"
+    },
+    { 
+      "name": "refresh",
+      "title": "refresh contacts",
+      "subtitle": "refresh contacts",
+      "description": "refresh contacts\n",
+      "mode": "view"
     }
   ],
   "dependencies": {
