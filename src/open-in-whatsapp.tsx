@@ -59,7 +59,7 @@ export default function Command() {
             actions={
               <ActionPanel>
                 <Action
-                  title="Open in WhatsApp"
+                  title="Open In WhatsApp"
                   icon={Icon.Message}
                   onAction={() => {
                     visitItem(contact);
@@ -81,7 +81,7 @@ export default function Command() {
             actions={
               <ActionPanel>
                 <Action
-                  title="Open in WhatsApp"
+                  title="Open In WhatsApp"
                   icon={Icon.Message}
                   onAction={() => {
                     visitItem(contact);
