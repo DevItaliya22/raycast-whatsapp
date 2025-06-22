@@ -3,29 +3,21 @@
   "name": "whatsapp",
   "title": "Whatsapp",
   "description": "Opens anything in whatsapp",
-  "icon": "extension-icon.png",
+  "icon": "whatsapp.png",
   "author": "devitaliya22",
   "license": "MIT",
   "commands": [
     {
       "name": "open-in-whatsapp",
-      "title": "Open in Whatsapp",
-      "subtitle": "Open any contact in whatsapp",
-      "description": "Open any contact in whatsapp by searching for their name or phone number. It autosaves the contacts in the background.",
-      "mode": "view"
-    },
-    { 
-      "name": "refresh",
-      "title": "Refresh Contacts",
-      "subtitle": "Refresh contacts",
-      "description": "Refresh contacts",
+      "title": "Open Chat",
+      "subtitle": "WhatsApp",
+      "description": "Search for your contacts and open a chat in WhatsApp.",
       "mode": "view"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.99.4",
-    "@raycast/utils": "^1.17.0",
-    "run-applescript": "^7.0.0"
+    "@raycast/utils": "^2.0.1"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.0.4",
