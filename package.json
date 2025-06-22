@@ -6,6 +6,14 @@
   "icon": "whatsapp.png",
   "author": "devitaliya22",
   "license": "MIT",
+  "contributors": [
+    "devitaliya22"
+  ],
+  "categories": [
+    "Applications",
+    "Communication",
+    "Productivity"
+  ],
   "commands": [
     {
       "name": "open-in-whatsapp",
